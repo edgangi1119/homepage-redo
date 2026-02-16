@@ -1,0 +1,153 @@
+/* Scoped translation of how_it_works_flowchart.html (no global body/* resets) */
+.hiw {
+  background: white;
+  padding: 5rem 2rem;
+  color: #2d3748;
+}
+
+.hiw__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hiw__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0a332b;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hiw__flowchart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.hiw__step {
+  background: white;
+  border: 3px solid #1c7060;
+  border-radius: 12px;
+  padding: 2rem;
+  flex: 1;
+  max-width: 320px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hiw__step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(28, 112, 96, 0.2);
+}
+
+.hiw__stepNumber {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #01d860;
+  color: #0a332b;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.hiw__stepTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1c7060;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.hiw__stepDesc {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.hiw__arrow {
+  color: #01d860;
+  font-size: 2rem;
+  font-weight: 300;
+  flex-shrink: 0;
+}
+
+.hiw__cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.hiw__ctaLink {
+  color: #1c7060;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.hiw__ctaLink:hover {
+  color: #01d860;
+}
+
+.hiw__ctaArrow {
+  transition: transform 0.3s ease;
+}
+
+.hiw__ctaLink:hover .hiw__ctaArrow {
+  transform: translateX(4px);
+}
+
+/* Mobile responsive */
+@media (max-width: 968px) {
+  .hiw__flowchart {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hiw__arrow {
+    transform: rotate(90deg);
+  }
+
+  .hiw__step {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hiw {
+    padding: 3rem 1.5rem;
+  }
+
+  .hiw__title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .hiw__step {
+    padding: 1.75rem;
+  }
+
+  .hiw__stepTitle {
+    font-size: 0.9rem;
+  }
+
+  .hiw__stepDesc {
+    font-size: 0.9rem;
+  }
+}
